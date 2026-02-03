@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Password Match Validation</h3>
+<form onsubmit="return checkPassword()">
+    <input type="password" id="pass1" placeholder="Password"><br><br>
+    <input type="password" id="pass2" placeholder="Confirm Password"><br><br>
+    <p id="passMsg"></p>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+function checkPassword() {
+    let p1 = document.getElementById("pass1").value;
+    let p2 = document.getElementById("pass2").value;
+
+    if (p1 !== p2) {
+        document.getElementById("passMsg").innerText =
+            "Passwords do not match";
+        return false;
+    }
+    return true;
+}
+</script>
+
+</body>
+</html>

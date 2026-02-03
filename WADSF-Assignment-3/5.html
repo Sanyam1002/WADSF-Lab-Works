@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Current Day and Time</h3>
+<button onclick="showDateTime()">Show</button>
+<p id="dateTime"></p>
+
+<script>
+function showDateTime() {
+    let now = new Date();
+    let day = now.toDateString();
+    let time = now.toLocaleTimeString();
+
+    document.getElementById("dateTime").innerText =
+        "Day: " + day + " | Time: " + time;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Count Occurrences</h3>
+<button onclick="countValue()">Count</button>
+<p id="count"></p>
+
+<script>
+function countValue() {
+    let arr = [1, 2, 3, 2, 4, 2, 5];
+    let value = 2;
+    let count = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === value) {
+            count++;
+        }
+    }
+
+    document.getElementById("count").innerText =
+        "Value " + value + " appears " + count + " times";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Email Validation</h3>
+<input type="text" id="email" placeholder="Enter Email" onblur="checkEmail()">
+<p id="emailMsg"></p>
+
+<script>
+function checkEmail() {
+    let email = document.getElementById("email");
+    let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!regex.test(email.value)) {
+        email.style.border = "2px solid red";
+        document.getElementById("emailMsg").innerText = "Invalid Email Format";
+    } else {
+        email.style.border = "";
+        document.getElementById("emailMsg").innerText = "";
+    }
+}
+</script>
+
+</body>
+</html>

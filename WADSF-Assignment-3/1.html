@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Average of Numbers</h3>
+<button onclick="findAverage()">Find Average</button>
+<p id="avg"></p>
+
+<script>
+function findAverage() {
+    let numbers = [10, 20, 30, 40];
+    let sum = 0;
+
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+
+    let average = sum / numbers.length;
+    document.getElementById("avg").innerText = "Average: " + average;
+}
+</script>
+
+</body>
+</html>

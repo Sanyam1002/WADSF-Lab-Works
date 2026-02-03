@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Validation</title>
+</head>
+<body>
+    <input type="password" id="password" placeholder="Enter Password">
+    <button onclick="checkPassword()">Check</button>
+    <p id="passMsg"></p>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById("password").value;
+            const regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).+$/;
+
+            document.getElementById("passMsg").innerText =
+                regex.test(password)
+                ? "Strong Password"
+                : "Password must contain at least one uppercase letter, one digit, and one special character";
+        }
+    </script>
+</body>
+</html>

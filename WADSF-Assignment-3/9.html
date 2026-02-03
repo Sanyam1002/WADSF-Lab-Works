@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Character Counter</title>
+</head>
+<body>
+    <input type="text" id="textInput" onkeyup="countChars()" placeholder="Type here">
+    <p>Characters Typed: <span id="count">0</span></p>
+
+    <script>
+        function countChars() {
+            const text = document.getElementById("textInput").value;
+            document.getElementById("count").innerText = text.length;
+        }
+    </script>
+</body>
+</html>

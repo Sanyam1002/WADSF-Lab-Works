@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Strings Longer Than 5 Characters</h3>
+<button onclick="showStrings()">Show</button>
+<p id="result"></p>
+
+<script>
+function showStrings() {
+    let words = ["apple", "banana", "grapes", "orange", "kiwi"];
+    let output = "";
+
+    for (let i = 0; i < words.length; i++) {
+        if (words[i].length > 5) {
+            output += words[i] + " ";
+        }
+    }
+
+    document.getElementById("result").innerText = output;
+}
+</script>
+
+</body>
+</html>

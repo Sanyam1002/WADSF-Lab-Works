@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Username Validation</h3>
+<form onsubmit="return validateUsername()">
+    <input type="text" id="username" placeholder="Enter Username">
+    <p id="userMsg"></p>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+function validateUsername() {
+    let username = document.getElementById("username").value;
+    let regex = /^[a-zA-Z0-9]{6,}$/;
+
+    if (!regex.test(username)) {
+        document.getElementById("userMsg").innerText =
+            "Username must be at least 6 characters and alphanumeric only";
+        return false;
+    }
+    return true;
+}
+</script>
+
+</body>
+</html>

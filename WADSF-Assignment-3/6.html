@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Validation</title>
+</head>
+<body>
+    <input type="text" id="email" placeholder="Enter Email">
+    <button onclick="validateEmail()">Validate</button>
+    <p id="emailMsg"></p>
+
+    <script>
+        function validateEmail() {
+            const email = document.getElementById("email").value;
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            document.getElementById("emailMsg").innerText =
+                regex.test(email) ? "Valid Email ID" : "Invalid Email Format";
+        }
+    </script>
+</body>
+</html>
